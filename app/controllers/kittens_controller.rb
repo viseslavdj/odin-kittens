@@ -8,6 +8,10 @@ class KittensController < ApplicationController
 
   # GET /kittens/1 or /kittens/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.json { render :json => @kitten }
+    end
   end
 
   # GET /kittens/new
@@ -50,9 +54,8 @@ class KittensController < ApplicationController
   # DELETE /kittens/1 or /kittens/1.json
   def destroy
     @kitten.destroy
-
     respond_to do |format|
-      format.html { redirect_to kittens_url, notice: "Kitten was successfully destroyed." }
+      format.html { redirect_to root_path, status: :see_other, notice: "Kitten was successfully destroyed." }
       format.json { head :no_content }
     end
   end

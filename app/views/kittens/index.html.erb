@@ -6,4 +6,6 @@
   <p><%= "Kitten Age: #{kitten.age}" %></p>
   <p><%= "Kitten Cuteness: #{kitten.cuteness}" %></p>
   <p><%= "Kitten Softness: #{kitten.softness}" %></p>
+  <%= link_to "Delete", kitten, method: :delete, data: {confirm: "Sure?"
+   } %>
  <% end %>

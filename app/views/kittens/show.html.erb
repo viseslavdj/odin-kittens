@@ -7,4 +7,5 @@
 
 <%= link_to "Edit this kitten", edit_kitten_path(@kitten) %> |
 <%= link_to "Back to kittens", kittens_path %>
+ <%= link_to "Delete", @kitten, data: { "turbo-method": :delete } %>
 </div>
