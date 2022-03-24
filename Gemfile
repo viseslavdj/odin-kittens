@@ -9,8 +9,8 @@ gem "rails", "~> 7.0.2", ">= 7.0.2.3"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-# Rest-Client
-gem 'rest-client', '~> 1.8'
+# Rest-Client & mime-types
+gem 'rest-client', '~> 2.1'
 
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"

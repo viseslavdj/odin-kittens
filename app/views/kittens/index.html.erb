@@ -1,11 +1,14 @@
 <h1>Kittens</h1>
-
+<hr>
 
 <% @kittens.each do |kitten| %>
   <p><%= "Kitten Name: #{kitten.name}" %></p>
   <p><%= "Kitten Age: #{kitten.age}" %></p>
   <p><%= "Kitten Cuteness: #{kitten.cuteness}" %></p>
   <p><%= "Kitten Softness: #{kitten.softness}" %></p>
-  <%= link_to "Delete", kitten, method: :delete, data: {confirm: "Sure?"
-   } %>
+  <%= link_to "Show", kitten %> |
+  <%= link_to "Delete", kitten, data: { "turbo-method": :delete } %>
+   <hr>
  <% end %>
+ <br>
+  <%= link_to "New kitten", new_kitten_url, method: :get %>
